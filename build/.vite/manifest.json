@@ -3,12 +3,12 @@
     "dynamicImports": [
       "src/pages/main-page.tsx"
     ],
-    "file": "assets/index-anZx1JVb.js",
+    "file": "assets/index-gZrmcNy_.js",
     "isEntry": true,
     "src": "index.html"
   },
   "src/pages/main-page.tsx": {
-    "file": "assets/main-page-bokv5yxw.js",
+    "file": "assets/main-page-g5mlwGKZ.js",
     "imports": [
       "index.html"
     ],

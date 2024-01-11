@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { Box } from '@mui/material';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
@@ -19,8 +17,7 @@ const columns: GridColDef[] = [
     description: 'This column has a value getter and is not sortable.',
     sortable: false,
     width: 160,
-    valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    valueGetter: (params: GridValueGetterParams) => `${params.row.firstName || ''} ${params.row.lastName || ''}`,
   },
 ];
 
@@ -39,15 +36,15 @@ const rows = [
 export const CustomersPage = () => (
   <Box sx={{ height: 400, width: '100%' }}>
     <DataGrid
-      rows={rows}
+      checkboxSelection
       columns={columns}
+      pageSizeOptions={[5, 10]}
+      rows={rows}
       initialState={{
         pagination: {
           paginationModel: { page: 0, pageSize: 5 },
         },
       }}
-      pageSizeOptions={[5, 10]}
-      checkboxSelection
     />
   </Box>
 );
