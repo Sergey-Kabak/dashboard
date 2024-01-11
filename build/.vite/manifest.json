@@ -1,0 +1,18 @@
+{
+  "index.html": {
+    "dynamicImports": [
+      "src/pages/main-page.tsx"
+    ],
+    "file": "assets/index-anZx1JVb.js",
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/pages/main-page.tsx": {
+    "file": "assets/main-page-bokv5yxw.js",
+    "imports": [
+      "index.html"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/pages/main-page.tsx"
+  }
+}

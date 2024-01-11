@@ -1,0 +1,194 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended",
+    "plugin:lodash/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:@tanstack/eslint-plugin-query/recommended",
+    "plugin:testing-library/react",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "prefer-arrow-functions",
+    "unicorn"
+  ],
+  "root": true,
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "import/named": 0,
+    "import/no-unresolved": 0,
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "type"
+        ],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@/assets/**",
+            "group": "index",
+            "position": "after"
+          },
+          {
+            "pattern": "**/*.css",
+            "group": "index",
+            "position": "after"
+          },
+          {
+            "pattern": "@/common-types",
+            "group": "type",
+            "position": "before"
+          },
+          {
+            "pattern": "@/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@mui/icons-material/**",
+            "group": "index",
+            "position": "after"
+          }
+        ],
+        "distinctGroup": false,
+        "pathGroupsExcludedImportTypes": [
+          "react",
+          "@mui/icons-material/**"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "warnOnUnassignedImports": true
+      }
+    ],
+    "jsx-a11y/no-autofocus": "off",
+    "lodash/prefer-lodash-method": [
+      2,
+      {
+        "ignoreMethods": [
+          "map",
+          "find",
+          "filter",
+          "some",
+          "every",
+          "values",
+          "keys",
+          "forEach",
+          "split",
+          "includes",
+          "reduce",
+          "replace"
+        ]
+      }
+    ],
+    "no-console": "warn",
+    "no-else-return": "error",
+    "no-duplicate-imports": "error",
+    "no-negated-condition": "error",
+    "no-nested-ternary": "error",
+    "no-unneeded-ternary": "error",
+    "no-unsafe-negation": "error",
+    "no-useless-return": "error",
+    "object-shorthand": "error",
+    "padding-line-between-statements": [
+      "warn",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "multiline-const"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "multiline-block-like"
+      },
+      {
+        "blankLine": "never",
+        "prev": "case",
+        "next": "case"
+      }
+    ],
+    "prefer-arrow-functions/prefer-arrow-functions": [
+      "warn",
+      {
+        "classPropertiesAllowed": false,
+        "disallowPrototype": false,
+        "returnStyle": "implicit",
+        "singleReturnOnly": false
+      }
+    ],
+    "prettier/prettier": "warn",
+    "react/boolean-prop-naming": [
+      "warn",
+      {
+        "rule": "^(is|has|show)[A-Z]([A-Za-z0-9]?)+",
+        "validateNested": true
+      }
+    ],
+    "react/display-name": "error",
+    "react/jsx-boolean-value": [
+      "warn",
+      "never"
+    ],
+    "react/jsx-curly-brace-presence": [
+      "warn",
+      {
+        "props": "never",
+        "children": "never"
+      }
+    ],
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "multiline": "last",
+        "noSortAlphabetically": false,
+        "reservedFirst": true,
+        "shorthandFirst": true
+      }
+    ],
+    "react/react-in-jsx-scope": 0,
+    "sonarjs/cognitive-complexity": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "unicorn/no-empty-file": "error",
+    "unicorn/filename-case": "error",
+    "unicorn/prefer-query-selector": "error",
+    "unicorn/prefer-logical-operator-over-ternary": "error",
+    "unicorn/prefer-regexp-test": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
